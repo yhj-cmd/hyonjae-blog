@@ -1,6 +1,8 @@
 project:
   type: website
-
+  output-dir: docs #사이트 상태인 걸 docs 파일로 저장
+  #index에서 preview 한 후 sites 파일 폴더 제거
+  
 website:
   title: "hyonjae-blog"
   navbar:
