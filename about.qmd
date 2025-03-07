@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "hyonjae-blog"
 image: profile.jpg
 about:
   template: jolla
@@ -12,8 +12,8 @@ about:
       href: https://linkedin.com
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/yhj-cmd/hyonjae-blog
 
 ---
 
-About this blog
+삶의 질을 높여줄 수 있는 유익한 지식들을 공부하려 합니다.

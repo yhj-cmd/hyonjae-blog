@@ -2,7 +2,7 @@
   "hash": "b04ce435ff2efc2df3f25eddc6cb2cc2",
   "result": {
     "engine": "jupyter",
-    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2025-03-06\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n::: {#76914f5e .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\n\na = np.arange(10)\na\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\narray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])\n```\n:::\n:::\n\n\n",
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2025-03-06\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n::: {#2e4effb0 .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\n\na = np.arange(10)\na\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\narray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])\n```\n:::\n:::\n\n\n",
     "supporting": [
       "index_files"
     ],
