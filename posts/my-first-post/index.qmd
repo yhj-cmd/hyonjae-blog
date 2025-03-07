@@ -1,0 +1,28 @@
+---
+title: "내 첫 블로그 포스트"
+author: "Hyonjae Yoon"
+date: "2025-03-07"
+categories: [python, pandas, numpy]
+image: "light blue gift box on light blue background-7944-3685148ad0242073104d5c374f6b67b6@1x.jpg"
+---
+
+## 파이썬 데이터 분석
+
+### 넘파이
+
+넘파이 패키지를 불러옵시다!
+
+```{python}
+import numpy as np
+
+a = np.array([3, 2, 15])
+a
+```
+
+#### 판다스
+
+판다스 패키지를 불러옵시다!
+
+```{python}
+import pandas as pd
+```

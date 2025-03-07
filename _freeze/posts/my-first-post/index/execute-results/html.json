@@ -1,0 +1,12 @@
+{
+  "hash": "90d3062872a901336c746e4f9ed8f208",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"내 첫 블로그 포스트\"\nauthor: \"Hyonjae Yoon\"\ndate: \"2025-03-07\"\ncategories: [python, pandas, numpy]\nimage: \"light blue gift box on light blue background-7944-3685148ad0242073104d5c374f6b67b6@1x.jpg\"\n---\n\n\n## 파이썬 데이터 분석\n\n### 넘파이\n\n넘파이 패키지를 불러옵시다!\n\n::: {#097a9072 .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\n\na = np.array([3, 2, 15])\na\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\narray([ 3,  2, 15])\n```\n:::\n:::\n\n\n#### 판다스\n\n판다스 패키지를 불러옵시다!\n\n::: {#c404a413 .cell execution_count=2}\n``` {.python .cell-code}\nimport pandas as pd\n```\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
