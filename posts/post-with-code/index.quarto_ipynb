@@ -5,20 +5,23 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: \"Post With Code\"\n",
-        "author: \"Harlow Malloc\"\n",
-        "date: \"2025-03-06\"\n",
+        "title: \"팔머펭귄 외관 특징 분석\"\n",
+        "author: \"이유진, 윤현재, 정의주, 조익현\"\n",
+        "date: \"2025-03-07\"\n",
         "categories: [news, code, analysis]\n",
-        "image: \"image.jpg\"\n",
+        "image: \"palmerpenguins.png\"\n",
         "---\n",
         "\n",
         "\n",
-        "This is a post with executable code.\n",
+        "## 각 펭귄 종별 특징 알아내기\n",
         "\n",
-        "## 10 조 조익현 이유진 정의주\n",
-        "## 각 펭귄 종별 특징 알아내서 발표\n"
+        "\n",
+        "# 2. 종별로 데이터 나누기\n",
+        "# 3. 종마다 부리 높이, 부리 깊이, 날개 길이 평균(+최대, 최소) 구해보기\n",
+        "\n",
+        "# 1. "
       ],
-      "id": "1e236c3f"
+      "id": "c918767d"
     },
     {
       "cell_type": "code",
@@ -27,27 +30,80 @@
         "import numpy as np\n",
         "import pandas as pd\n",
         "\n",
-        "# 1. nan 0으로 대치\n",
-        "# 2. 종별로 데이터 나누기\n",
-        "# 3. 종마다 부리 높이, 부리 깊이, 날개 길이 평균(+최대, 최소) 구해보기\n",
+        "from palmerpenguins import load_penguins\n",
+        "penguins = load_penguins()\n",
+        "penguins.info()\n"
+      ],
+      "id": "692d6211",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 1. NaN 값 확인 및 제거\n"
+      ],
+      "id": "65ccad9e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "penguins.isna().sum()\n",
         "\n",
-        "# 1\n",
+        "\n",
+        "species_counts = {}\n",
+        "\n",
+        "for species in penguins[\"species\"].unique():\n",
+        "    species_counts[species] = [penguins.loc[\"species\"] == species, \"species\"].shape[0]"
+      ],
+      "id": "a13bb453",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "\n",
+        "\n",
         "penguins.isna()\n",
         "penguins[\"bill_length_mm\"].loc[penguins[\"bill_length_mm\"].isna()].iloc[0] = 0\n",
         "penguins[\"bill_depth_mm\"].loc[penguins[\"bill_depth_mm\"].isna()].iloc[0] = 0\n",
         "penguins[\"flipper_length_mm\"].loc[penguins[\"flipper_length_mm\"].isna()].iloc[0] = 0\n",
         "penguins[\"body_mass_g\"].loc[penguins[\"body_mass_g\"].isna()].iloc[0] = 0\n",
-        "penguins[\"sex\"].loc[penguins[\"sex\"].isna()].iloc[0] = \"X\"\n",
+        "penguins[\"sex\"].loc[penguins[\"sex\"].isna()].iloc[0] = \"X\""
+      ],
+      "id": "a8b13bd6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd\n",
         "\n",
-        "# 2, 3\n",
         "penguins.describe()\n",
         "ad = penguins.loc[penguins[\"species\"] == \"Adelie\"]\n",
         "gt = penguins.loc[penguins[\"species\"] == \"Gentoo\"]\n",
         "cs = penguins.loc[penguins[\"species\"] == \"Chinstrap\"]\n",
         "ad.describe()\n",
         "gt.describe()\n",
-        "cs.describe()\n",
-        "\n",
+        "cs.describe()"
+      ],
+      "id": "f5fd1cce",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
         "# 결과 요약\n",
         "#  부리 길이 max min mean \n",
         "# Adelie** | 46.0 | 32.1 | 38.79 |\n",
@@ -68,11 +124,9 @@
         "\n",
         "# - **Adelie**: **부리 길이 짧음, 부리 깊이 보통, 날개 길이 짧음, 몸무게 가벼움**\n",
         "# - **Chinstrap**: **부리 길이 가장 김, 부리 깊이 보통, 날개 길이 중간, 몸무게 중간**\n",
-        "# - **Gentoo**: **부리 길이 김, 부리 깊이 가장 얇음, 날개 길이 가장 긺, 몸무게 가장 무거움**\n"
+        "# - **Gentoo**: **부리 길이 김, 부리 깊이 가장 얇음, 날개 길이 가장 긺, 몸무게 가장 무거움**"
       ],
-      "id": "4137dbd4",
-      "execution_count": null,
-      "outputs": []
+      "id": "4bd5ae1f"
     }
   ],
   "metadata": {

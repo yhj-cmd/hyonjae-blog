@@ -4,8 +4,8 @@ project:
   #index에서 preview 한 후 sites 파일 폴더 제거
   
 website:
-  title: "hyonjae-blog"
-  navbar:
+  title: "현재 Qmd 블로그"
+  navbar: 
     right:
       - about.qmd
       - icon: github

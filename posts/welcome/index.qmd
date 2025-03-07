@@ -9,4 +9,6 @@ This is the first post in a Quarto blog. Welcome!
 
 ![](thumbnail.jpg)
 
+thumbnail.jpg로 마크다운 형식으로 넣으면 썸네일과 블로그 모두에 표시됨
+
 Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
